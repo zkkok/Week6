@@ -31,7 +31,7 @@ pipeline{
             post{
                 success{
                     mail to: "zhenkangko@gmail.com",
-                    subject: "Email"
+                    subject: "Email",
                     body: "Success"                    
                 }
             }
