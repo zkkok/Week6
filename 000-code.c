@@ -29,10 +29,12 @@ pipeline{
                 echo "Deploy the application to $TESTING_ENVIRONMENT"
             }
             post{
-                mail to: "zhenkangko@gmail.com",
-                subject: "Email"
-                body: "Success"
+                success{
+                    mail to: "zhenkangko@gmail.com",
+                    subject: "Email"
+                    body: "Success"                    
                 }
+            }
         }
         stage('Approval'){
             steps{
